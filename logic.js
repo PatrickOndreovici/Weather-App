@@ -1,5 +1,6 @@
 var clicked = false;
-$(".searchButton").click(function() {
+function Click()
+{
     if (clicked == false)
     {
         clicked = true;
@@ -11,6 +12,15 @@ $(".searchButton").click(function() {
             clicked = false;
             $(".vreme").css("display", "none");
         });
+    }
+}
+$(".searchButton").click(function() {
+    Click();
+});
+
+$("input").keypress(function(event) {
+    if (event.keyCode == 13) {
+        Click();
     }
 });
 
